@@ -1,0 +1,33 @@
+<div class="main" layout="row">
+  <span flex=""></span>
+  <div layout="column">
+    <md-content class="md-padding">
+    <md-card>
+      <h1>Astronomy picture of the day</h1>
+      <img ng-src="{{imageDetail.url}}" class="md-card-image" alt="Washed Out">
+      <md-card-content>
+        <h2 class="md-title">{{imageDetail.title}}</h2>
+        <p>
+          {{imageDetail.explanation}}
+        </p>
+        <div class="sk-spinner sk-spinner-cube-grid" ng-show="loading">
+          <div class="sk-cube"></div>
+          <div class="sk-cube"></div>
+          <div class="sk-cube"></div>
+          <div class="sk-cube"></div>
+          <div class="sk-cube"></div>
+          <div class="sk-cube"></div>
+          <div class="sk-cube"></div>
+          <div class="sk-cube"></div>
+          <div class="sk-cube"></div>
+        </div>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button>Like</md-button>
+        <md-button>Comment</md-button>
+      </div>
+    </md-card>
+   </md-content>
+  </div>
+  <span flex=""></span>
+</div>

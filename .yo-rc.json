@@ -1,0 +1,17 @@
+{
+  "generator-angular-meteor": {
+    "filters": {
+      "js": true,
+      "html": true,
+      "css": true,
+      "pagination": false,
+      "material": true,
+      "bower": true,
+      "auth": true,
+      "oauth": true,
+      "facebookAuth": true,
+      "twitterAuth": true
+    },
+    "appname": "spaceman"
+  }
+}
