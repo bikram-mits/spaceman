@@ -1,7 +1,86 @@
-<div class="main" layout="row">
-  <span flex=""></span>
-  <div layout="column">
-    <md-content class="md-padding">
+
+<div layout="row" layout-margin layout-fill layout-padding>
+  <div flex><md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+    <span> <md-card>
+      <img ng-src="{{imageDetail.url}}" class="md-card-image" alt="Washed Out">
+      <md-card-content>
+        <h2 class="md-title">{{imageDetail.title}}</h2>
+        <p>
+          {{imageDetail.explanation}}
+        </p>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button>Like</md-button>
+        <md-button>Comment</md-button>
+      </div>
+    </md-card></span>
+  </md-whiteframe></div>
+  <div flex>
+  <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+    <span> <md-card>
+      <img ng-src="{{imageDetail.url}}" class="md-card-image" alt="Washed Out">
+      <md-card-content>
+        <h2 class="md-title">{{imageDetail.title}}</h2>
+        <p>
+          {{imageDetail.explanation}}
+        </p>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button>Like</md-button>
+        <md-button>Comment</md-button>
+      </div>
+    </md-card></span>
+  </md-whiteframe>
+  </div>
+   <div flex>
+     <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+    <span> <md-card>
+      <img ng-src="{{imageDetail.url}}" class="md-card-image" alt="Washed Out">
+      <md-card-content>
+        <h2 class="md-title">{{imageDetail.title}}</h2>
+        <p>
+          {{imageDetail.explanation}}
+        </p>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button>Like</md-button>
+        <md-button>Comment</md-button>
+      </div>
+    </md-card></span>
+  </md-whiteframe>
+   </div>
+    <div flex>
+      <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+    <span> <md-card>
+      <img ng-src="{{imageDetail.url}}" class="md-card-image" alt="Washed Out">
+      <md-card-content>
+        <h2 class="md-title">{{imageDetail.title}}</h2>
+        <p>
+          {{imageDetail.explanation}}
+        </p>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button>Like</md-button>
+        <md-button>Comment</md-button>
+      </div>
+    </md-card></span>
+  </md-whiteframe>
+    </div>
+</div>
+
+
+
+<!-- 
+    <md-content layout="column" layout-align="center center">
+       <div layout="row">
+  <div>I'm left.</div>
+  <div>I'm right.</div>
+</div>
+<div layout="column">
+  <div>I'm above.</div>
+  <div>I'm below.</div>
+</div>
+    <div class="app-content">
     <md-card>
       <h1>Astronomy picture of the day</h1>
       <img ng-src="{{imageDetail.url}}" class="md-card-image" alt="Washed Out">
@@ -23,11 +102,10 @@
         </div>
       </md-card-content>
       <div class="md-actions" layout="row" layout-align="end center">
-        <md-button>Like</md-button>
+        <md-button><core-icon icon="info"></core-icon></md-button>
         <md-button>Comment</md-button>
       </div>
     </md-card>
+    </div>
    </md-content>
-  </div>
-  <span flex=""></span>
-</div>
+ -->
