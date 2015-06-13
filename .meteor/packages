@@ -6,7 +6,7 @@
 
 meteor-platform
 autopublish
-urigo:angular
+urigo:angular@=0.8.3
 angularui:angular-ui-router
 angular:angular-material
 mquandalle:bower

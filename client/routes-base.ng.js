@@ -2,7 +2,8 @@
 
 angular.module('spacemanApp')
 
-.config(function($urlRouterProvider, $locationProvider) {
+.config(function($urlRouterProvider, $locationProvider, $mdThemingProvider) {
+  $mdThemingProvider.theme('docs-dark')
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
 }).run(['$rootScope', '$state', function($rootScope, $state) {
