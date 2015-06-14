@@ -61,5 +61,21 @@ angular.module('spacemanApp')
 
         }
     }
+    $scope.loginWithFacebook = function (){
+        console.log(Meteor);
+        Meteor.loginWithFacebook({
+          requestPermissions: ['email']
+        }, function(error) {
+          console.log(error);
+          if (error) {
+            return console.log(error.reason);
+          }else{
+            
+            $mdDialog.cancel();
+
+          }
+        });
+
+    }
 
 }])
