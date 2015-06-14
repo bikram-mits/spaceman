@@ -21,3 +21,9 @@ meteorhacks:npm
 npm-container
 meteorhacks:async
 yogiben:spinkit
+aldeed:collection2
+twbs:bootstrap
+service-configuration
+email
+meteorhacks:ssr
+fortawesome:fontawesome

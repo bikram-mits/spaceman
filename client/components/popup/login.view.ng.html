@@ -1,6 +1,6 @@
 
-<md-dialog aria-label="Mango (Fruit)">
-  <form>
+<md-dialog  layout="column" layout-wrap ng-init="showLoginRegister=true">
+  <form ng-show="showLoginRegister" name="login" novalidate>
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2>Login</h2>
@@ -10,16 +10,56 @@
   <md-dialog-content layout="row">
     <md-content md-theme="docs-dark" layout-padding layout="row" layout-sm="column">
       <md-input-container>
-        <input ng-model="user.email" placeholder="Email">
+        <input ng-model="user.email" placeholder="Email" type="email" name="email" required>
       </md-input-container>
       <md-input-container>
         <br>
-        <input ng-model="user.password" type="password" placeholder="Password">
+        <input ng-model="user.password" type="password" placeholder="Password" name="pass" required>
+      </md-input-container>
+      <md-input-container md-no-float>
+        <md-button class="md-raised md-primary" ng-click="login.$submitted=true;loginUser(user,login.$valid)">Login</md-button>
+     <!--    <md-button md-no-ink class="md-primary">Login</md-button> -->
       </md-input-container>
     </md-content>
   </md-dialog-content>
   <div class="md-actions" layout="row">
-    
+   <i class="fa fa-facebook-official fa-3x" style="cursor:pointer"></i>&nbsp;&nbsp;&nbsp;
+   <i class="fa fa-twitter-square fa-3x" style="cursor:pointer"></i>&nbsp;&nbsp;
+   <md-button md-no-ink class="md-primary" ng-click="showLoginRegister =false">Register</md-button>
+   <md-button ng-click="cancel()">Close-X</md-button>  
+  </div>
+  </form>
+  <form ng-show="!showLoginRegister"  name="register" novalidate>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Register</h2>
+      <span flex></span>
+    </div>
+  </md-toolbar>
+   <md-content layout-padding>
+    <md-input-container class="md-icon-float" >
+      <!-- Use floating label instead of placeholder -->
+      <label>Name</label>
+      <input ng-model="userRegister.username" type="text">
+      <div ng-if="register.$submitted">
+        <p>hi</p>
+      </div>
+    </md-input-container>
+    <md-input-container >
+      <input ng-model="userRegister.email" type="email" placeholder="Email" ng-required="true">
+    </md-input-container>
+    <md-input-container md-no-float>
+      <input ng-model="userRegister.password" type="password" placeholder="        Password" >
+    </md-input-container>
+    <md-input-container md-no-float>
+
+      <md-button class="md-raised md-primary" ng-click="registerUser(userRegister, register.$valid)">Register</md-button>
+     <!--  <md-button md-no-ink class="md-primary">Register</md-button> -->
+    </md-input-container>
+  </md-content>
+  <div class="md-actions" layout="row">
+   <md-button md-no-ink class="md-primary" ng-click="showLoginRegister = true">Signup</md-button>
+   <md-button ng-click="cancel()">Close-X</md-button>  
   </div>
   </form>
 </md-dialog>

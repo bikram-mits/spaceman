@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('spacemanApp')
-.controller('MainCtrl',['$scope','$meteor','$mdDialog', function($scope, $meteor, $mdDialog) {
+.controller('MainCtrl',['$scope','$meteor','$mdDialog', '$rootScope', function($scope, $meteor, $mdDialog, $rootScope) {
   $scope.loading = true;
   $meteor.call('getMe').then(function(res){
    $scope.imageDetail = JSON.parse(res.result)
@@ -9,18 +9,22 @@ angular.module('spacemanApp')
 
   })
   $scope.showDialog = function(ev){
-    console.log(ev);
-    $mdDialog.show({
-      controller: 'DialogController',
-      templateUrl: 'client/components/popup/login.view.ng.html',
-      parent: angular.element(document.body),
-      targetEvent: ev,
-    })
-    .then(function(answer) {
-      $scope.alert = 'You said the information was "' + answer + '".';
-    }, function() {
-      $scope.alert = 'You cancelled the dialog.';
-    });
+    if (!$rootScope.currentUser){ 
+      $mdDialog.show({
+        controller: 'DialogController',
+        templateUrl: 'client/components/popup/login.view.ng.html',
+        parent: angular.element(document.body),
+        targetEvent: ev,
+      })
+      .then(function(answer) {
+        $scope.alert = 'You said the information was "' + answer + '".';
+      }, function() {
+        $scope.alert = 'You cancelled the dialog.';
+      });
+    }else{
+
+       console.log('you are allowed to comment or like');
+    }
 
   }
 }]);

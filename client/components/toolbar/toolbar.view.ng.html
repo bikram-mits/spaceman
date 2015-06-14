@@ -1,7 +1,11 @@
 <md-toolbar>
 
  <div class="md-toolbar-tools">
-    <span class="md-flex">Spaceman</span>
+   <div layout="row" layout-margin>
+    <span flex="60">Spaceman</span>
+    <span flex="60">Welcome {{currentUser.username | uppercase}}!</span>
+
+   </div>
  </div>
 
 </md-toolbar>
